@@ -1,23 +1,23 @@
 ﻿# AetherEngine
-# Unity + AstraEngine
+# Unity + TerraEngine
 ## Hybrid Game Development Architecture
 
 **Project Proposal & Technical README**
 
 **Status:** Proposed — Pending Team Discussion  
 **Development Target:** 7-Day Prototype  
-**Proposed Technology:** Unity + AstraEngine (C++ Backend)  
+**Proposed Technology:** Unity + TerraEngine (C++ Backend)  
 **Game Direction:** EVE-inspired Space Exploration and Scientific Expeditions
 
 ---
 
 # 1. Introduction
 
-This proposal introduces a hybrid game development architecture that combines **Unity as the game development and presentation environment** with **AstraEngine as an independent spatial and simulation backend**.
+This proposal introduces a hybrid game development architecture that combines **Unity as the game development and presentation environment** with **TerraEngine as an independent spatial and simulation backend**.
 
-Instead of developing an entire game engine from scratch, the approach is to reuse AstraEngine's existing architectural foundations while relying on Unity for the systems that make game development faster and more practical.
+Instead of developing an entire game engine from scratch, the approach is to reuse TerraEngine's existing architectural foundations while relying on Unity for the systems that make game development faster and more practical.
 
-AstraEngine will provide the underlying spatial intelligence, world representation, physics and selected simulation capabilities.
+TerraEngine will provide the underlying spatial intelligence, world representation, physics and selected simulation capabilities.
 
 Unity will handle the actual game experience, including rendering, assets, UI, graphs, animation, input, scenes and gameplay progression.
 
@@ -54,11 +54,11 @@ The initial concept is not intended to reproduce EVE Online or implement a full-
 
 The central idea is to separate the underlying simulation architecture from the game presentation architecture.
 
-Rather than making AstraEngine responsible for every aspect of the game, each system will have a clearly defined owner.
+Rather than making TerraEngine responsible for every aspect of the game, each system will have a clearly defined owner.
 
-## 3.1 AstraEngine — Spatial and Simulation Backend
+## 3.1 TerraEngine — Spatial and Simulation Backend
 
-AstraEngine will provide the underlying world and simulation capabilities.
+TerraEngine will provide the underlying world and simulation capabilities.
 
 Its proposed responsibilities include:
 
@@ -72,7 +72,7 @@ Its proposed responsibilities include:
 - Astronomical data integration.
 - Spatial queries and region retrieval.
 
-AstraEngine should remain independent of Unity-specific and Unreal-specific classes.
+TerraEngine should remain independent of Unity-specific and Unreal-specific classes.
 
 Its internal implementation should not depend on a particular game engine or graphics API.
 
@@ -95,7 +95,7 @@ Its responsibilities include:
 - Gameplay progression.
 - Story and mission presentation.
 
-Unity will receive the required spatial and simulation information from AstraEngine and use it to update the game world.
+Unity will receive the required spatial and simulation information from TerraEngine and use it to update the game world.
 
 ## 3.3 Team Responsibilities
 
@@ -109,7 +109,7 @@ The development team will focus on the actual game experience:
 - UI and gameplay design.
 - Testing and feedback.
 
-The objective is to make the project modular enough that team members can work on different areas without needing to modify AstraEngine's internal implementation.
+The objective is to make the project modular enough that team members can work on different areas without needing to modify TerraEngine's internal implementation.
 
 # 4. Proposed System Architecture
 
@@ -149,17 +149,17 @@ The objective is to make the project modular enough that team members can work o
     Astronomical Data
 ```
 
-The integration layer will act as the communication boundary between Unity and AstraEngine.
+The integration layer will act as the communication boundary between Unity and TerraEngine.
 
 Unity should not need to understand the internal implementation of HSC, physics or collision.
 
 It should interact with a defined public interface.
 
-# 5. AstraEngine Integration Strategy
+# 5. TerraEngine Integration Strategy
 
 The proposed initial integration method is a native C++ shared library.
 
-AstraEngine will be compiled into a Windows DLL, which can be loaded by Unity.
+TerraEngine will be compiled into a Windows DLL, which can be loaded by Unity.
 
 Unity's C# environment can communicate with the DLL through P/Invoke.
 
@@ -178,12 +178,12 @@ Astra_GetEntityState(...);
 Astra_Shutdown();
 ```
 
-These are illustrative interface names. The actual API will be designed around AstraEngine's existing modules and ownership rules.
+These are illustrative interface names. The actual API will be designed around TerraEngine's existing modules and ownership rules.
 
 ## 5.1 Proposed Integration Components
 
 ```text
-AstraEngine/
+TerraEngine/
 |
 +-- Core/
 +-- Spatial/
@@ -210,7 +210,7 @@ UnityProject/
 +-- Assets/
 |
 +-- Plugins/
-|   +-- AstraEngine.dll
+|   +-- TerraEngine.dll
 |
 +-- Scripts/
 |   +-- AstraBridge/
@@ -227,7 +227,7 @@ UnityProject/
 
 ## 5.2 Future Engine Compatibility
 
-The integration should be designed so that the same AstraEngine backend can eventually support other frontend applications.
+The integration should be designed so that the same TerraEngine backend can eventually support other frontend applications.
 
 Potential future integrations:
 
@@ -244,9 +244,9 @@ This is a long-term architectural objective, not a requirement for the initial p
 
 # 6. Simulation and Game Loop
 
-Unity will control the main game runtime and determine when AstraEngine receives updates.
+Unity will control the main game runtime and determine when TerraEngine receives updates.
 
-AstraEngine will maintain its own internal simulation state and timestep.
+TerraEngine will maintain its own internal simulation state and timestep.
 
 Proposed execution flow:
 
@@ -280,7 +280,7 @@ Rendering and UI Updates
 
 A fixed simulation timestep should be used for physics where appropriate, with rendering allowed to run independently.
 
-The architecture must define authoritative ownership of simulation state to prevent Unity and AstraEngine from independently controlling the same physical properties.
+The architecture must define authoritative ownership of simulation state to prevent Unity and TerraEngine from independently controlling the same physical properties.
 
 # 7. Initial Gameplay Workflow
 
@@ -318,13 +318,13 @@ The objective is a demonstrable prototype, not a complete commercial game.
 | 6 | Scientific objectives and evaluation | Complete mission workflow |
 | 7 | Testing, debugging and packaging | Demonstrable prototype |
 
-This schedule assumes that AstraEngine's existing systems are usable, the HSC is sufficiently stable for integration, and most visual assets are sourced or adapted rather than modelled from scratch.
+This schedule assumes that TerraEngine's existing systems are usable, the HSC is sufficiently stable for integration, and most visual assets are sourced or adapted rather than modelled from scratch.
 
 # 9. Prototype Scope
 
 ## Included in the initial prototype
 
-- AstraEngine native integration.
+- TerraEngine native integration.
 - HSC-backed spatial queries.
 - Astronomical catalogue integration.
 - Basic universe navigation.
@@ -361,11 +361,11 @@ Several areas require careful implementation.
 
 Astronomical coordinates and local rendering coordinates operate at very different scales.
 
-AstraEngine should handle authoritative spatial coordinates and reference frames. Unity should receive suitable local or camera-relative coordinates for rendering.
+TerraEngine should handle authoritative spatial coordinates and reference frames. Unity should receive suitable local or camera-relative coordinates for rendering.
 
 ### Physics Ownership
 
-AstraEngine and Unity must not independently simulate the same physical object.
+TerraEngine and Unity must not independently simulate the same physical object.
 
 The team must establish whether Astra or Unity owns each object's authoritative physics state.
 
@@ -386,7 +386,7 @@ High-frequency simulation data should use efficient native data exchange rather 
 
 ### Visual Assets
 
-Unity will own visual assets and their presentation. AstraEngine should not require Unity-specific asset types.
+Unity will own visual assets and their presentation. TerraEngine should not require Unity-specific asset types.
 
 ### Scientific Accuracy
 
@@ -398,7 +398,7 @@ One of the main goals is to establish a reusable Unity project that can be share
 
 The initial developer will establish:
 
-- AstraEngine integration.
+- TerraEngine integration.
 - Unity project structure.
 - Basic world navigation.
 - Initial game runtime.
@@ -434,17 +434,17 @@ Possible future directions include:
 - Additional scientific mission types.
 - Persistent multiplayer exploration.
 - Integration with Unreal Engine.
-- Standalone AstraEngine applications.
+- Standalone TerraEngine applications.
 
-The long-term goal is to preserve AstraEngine as a reusable backend rather than making it permanently dependent on one game or frontend.
+The long-term goal is to preserve TerraEngine as a reusable backend rather than making it permanently dependent on one game or frontend.
 
 # 13. Final Proposal
 
 The proposed development direction is:
 
-**Unity + AstraEngine: A Hybrid Space Exploration and Simulation Architecture.**
+**Unity + TerraEngine: A Hybrid Space Exploration and Simulation Architecture.**
 
-AstraEngine provides the underlying spatial and simulation foundation.
+TerraEngine provides the underlying spatial and simulation foundation.
 
 Unity provides the game runtime, visual environment and gameplay experience.
 
