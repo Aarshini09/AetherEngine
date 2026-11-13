@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Avani API Test</title>
+</head>
+
+<body>
+    <h1>Avani Backend Test</h1>
+    <pre id="output">Connecting...</pre>
+
+    <script type="module">
+        import { WeatherAPI } from "./src/api/WeatherAPI.js";
+
+        const output = document.getElementById("output");
+        const api = new WeatherAPI();
+
+        async function test() {
+            try {
+                const health = await api.getHealth();
+
+                output.textContent =
+                    "HEALTH CHECK\n" +
+                    JSON.stringify(health, null, 2);
+
+                console.log("Avani health:", health);
+            } catch (error) {
+                output.textContent = error.stack || error.message;
+                console.error(error);
+            }
+        }
+        try {
+            const data = await api.getTimeSeries({
+                variable: "temperature",
+                startTime: "2015-01-01T00:00:00",
+                endTime: "2015-01-02T00:00:00",
+                latitude: 20.5937,
+                longitude: 78.9629,
+                timeStep: 1
+            });
+
+            console.log("ERA5 time series:", data);
+        } catch (error) {
+            console.error("Time-series request failed:", error);
+        }
+
+        const frame = await api.getWeatherFrame({
+            variable: "temperature",
+            time: "2015-01-01T00:00:00",
+            minLatitude: 5,
+            maxLatitude: 35,
+            minLongitude: 65,
+            maxLongitude: 100,
+            maxRows: 31,
+            maxColumns: 36
+        });
+
+        console.log("ERA5 spatial frame:", frame);
+        console.log("Dimensions:", frame.width, frame.height);
+        console.log("Latitude count:", frame.latitudes.length);
+        console.log("Longitude count:", frame.longitudes.length);
+        console.log("Temperature count:", frame.values.length);
+
+        test();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1521 @@
+{
+  "variable": "temperature",
+  "start_time": "2015-01-01T00:00",
+  "end_time": "2015-01-01T18:00",
+  "frame_count": 4,
+  "frames": [
+    {
+      "time": "2015-01-01T00:00",
+      "variable": "temperature",
+      "values": [
+        {
+          "node_id": 0,
+          "latitude": 21.0,
+          "longitude": 78.0,
+          "value": 18.541894531250023
+        },
+        {
+          "node_id": 1,
+          "latitude": 21.0,
+          "longitude": 78.25,
+          "value": 18.668847656250023
+        },
+        {
+          "node_id": 2,
+          "latitude": 21.0,
+          "longitude": 78.5,
+          "value": 18.875878906250023
+        },
+        {
+          "node_id": 3,
+          "latitude": 21.0,
+          "longitude": 78.75,
+          "value": 19.008691406250023
+        },
+        {
+          "node_id": 4,
+          "latitude": 21.0,
+          "longitude": 79.0,
+          "value": 19.321191406250023
+        },
+        {
+          "node_id": 5,
+          "latitude": 21.0,
+          "longitude": 79.25,
+          "value": 19.260644531250023
+        },
+        {
+          "node_id": 6,
+          "latitude": 21.0,
+          "longitude": 79.5,
+          "value": 19.207910156250023
+        },
+        {
+          "node_id": 7,
+          "latitude": 21.0,
+          "longitude": 79.75,
+          "value": 19.295800781250023
+        },
+        {
+          "node_id": 8,
+          "latitude": 21.0,
+          "longitude": 80.0,
+          "value": 19.067285156250023
+        },
+        {
+          "node_id": 9,
+          "latitude": 20.75,
+          "longitude": 78.0,
+          "value": 18.924707031250023
+        },
+        {
+          "node_id": 10,
+          "latitude": 20.75,
+          "longitude": 78.25,
+          "value": 19.350488281250023
+        },
+        {
+          "node_id": 11,
+          "latitude": 20.75,
+          "longitude": 78.5,
+          "value": 20.002832031250023
+        },
+        {
+          "node_id": 12,
+          "latitude": 20.75,
+          "longitude": 78.75,
+          "value": 20.135644531250023
+        },
+        {
+          "node_id": 13,
+          "latitude": 20.75,
+          "longitude": 79.0,
+          "value": 19.934472656250023
+        },
+        {
+          "node_id": 14,
+          "latitude": 20.75,
+          "longitude": 79.25,
+          "value": 19.610253906250023
+        },
+        {
+          "node_id": 15,
+          "latitude": 20.75,
+          "longitude": 79.5,
+          "value": 19.496972656250023
+        },
+        {
+          "node_id": 16,
+          "latitude": 20.75,
+          "longitude": 79.75,
+          "value": 19.575097656250023
+        },
+        {
+          "node_id": 17,
+          "latitude": 20.75,
+          "longitude": 80.0,
+          "value": 19.463769531250023
+        },
+        {
+          "node_id": 18,
+          "latitude": 20.5,
+          "longitude": 78.0,
+          "value": 19.260644531250023
+        },
+        {
+          "node_id": 19,
+          "latitude": 20.5,
+          "longitude": 78.25,
+          "value": 19.694238281250023
+        },
+        {
+          "node_id": 20,
+          "latitude": 20.5,
+          "longitude": 78.5,
+          "value": 20.485253906250023
+        },
+        {
+          "node_id": 21,
+          "latitude": 20.5,
+          "longitude": 78.75,
+          "value": 20.715722656250023
+        },
+        {
+          "node_id": 22,
+          "latitude": 20.5,
+          "longitude": 79.0,
+          "value": 20.463769531250023
+        },
+        {
+          "node_id": 23,
+          "latitude": 20.5,
+          "longitude": 79.25,
+          "value": 20.162988281250023
+        },
+        {
+          "node_id": 24,
+          "latitude": 20.5,
+          "longitude": 79.5,
+          "value": 19.991113281250023
+        },
+        {
+          "node_id": 25,
+          "latitude": 20.5,
+          "longitude": 79.75,
+          "value": 19.998925781250023
+        },
+        {
+          "node_id": 26,
+          "latitude": 20.5,
+          "longitude": 80.0,
+          "value": 19.957910156250023
+        },
+        {
+          "node_id": 27,
+          "latitude": 20.25,
+          "longitude": 78.0,
+          "value": 19.760644531250023
+        },
+        {
+          "node_id": 28,
+          "latitude": 20.25,
+          "longitude": 78.25,
+          "value": 20.118066406250023
+        },
+        {
+          "node_id": 29,
+          "latitude": 20.25,
+          "longitude": 78.5,
+          "value": 20.784082031250023
+        },
+        {
+          "node_id": 30,
+          "latitude": 20.25,
+          "longitude": 78.75,
+          "value": 20.920800781250023
+        },
+        {
+          "node_id": 31,
+          "latitude": 20.25,
+          "longitude": 79.0,
+          "value": 20.891503906250023
+        },
+        {
+          "node_id": 32,
+          "latitude": 20.25,
+          "longitude": 79.25,
+          "value": 20.696191406250023
+        },
+        {
+          "node_id": 33,
+          "latitude": 20.25,
+          "longitude": 79.5,
+          "value": 20.596582031250023
+        },
+        {
+          "node_id": 34,
+          "latitude": 20.25,
+          "longitude": 79.75,
+          "value": 20.604394531250023
+        },
+        {
+          "node_id": 35,
+          "latitude": 20.25,
+          "longitude": 80.0,
+          "value": 20.621972656250023
+        },
+        {
+          "node_id": 36,
+          "latitude": 20.0,
+          "longitude": 78.0,
+          "value": 20.370019531250023
+        },
+        {
+          "node_id": 37,
+          "latitude": 20.0,
+          "longitude": 78.25,
+          "value": 20.803613281250023
+        },
+        {
+          "node_id": 38,
+          "latitude": 20.0,
+          "longitude": 78.5,
+          "value": 20.998925781250023
+        },
+        {
+          "node_id": 39,
+          "latitude": 20.0,
+          "longitude": 78.75,
+          "value": 20.954003906250023
+        },
+        {
+          "node_id": 40,
+          "latitude": 20.0,
+          "longitude": 79.0,
+          "value": 21.065332031250023
+        },
+        {
+          "node_id": 41,
+          "latitude": 20.0,
+          "longitude": 79.25,
+          "value": 21.164941406250023
+        },
+        {
+          "node_id": 42,
+          "latitude": 20.0,
+          "longitude": 79.5,
+          "value": 21.053613281250023
+        },
+        {
+          "node_id": 43,
+          "latitude": 20.0,
+          "longitude": 79.75,
+          "value": 21.211816406250023
+        },
+        {
+          "node_id": 44,
+          "latitude": 20.0,
+          "longitude": 80.0,
+          "value": 21.229394531250023
+        }
+      ],
+      "anomalies": [],
+      "regions": [],
+      "tracks": [],
+      "events": []
+    },
+    {
+      "time": "2015-01-01T06:00",
+      "variable": "temperature",
+      "values": [
+        {
+          "node_id": 0,
+          "latitude": 21.0,
+          "longitude": 78.0,
+          "value": 20.306726074218773
+        },
+        {
+          "node_id": 1,
+          "latitude": 21.0,
+          "longitude": 78.25,
+          "value": 21.082116699218773
+        },
+        {
+          "node_id": 2,
+          "latitude": 21.0,
+          "longitude": 78.5,
+          "value": 21.623132324218773
+        },
+        {
+          "node_id": 3,
+          "latitude": 21.0,
+          "longitude": 78.75,
+          "value": 22.240319824218773
+        },
+        {
+          "node_id": 4,
+          "latitude": 21.0,
+          "longitude": 79.0,
+          "value": 22.861413574218773
+        },
+        {
+          "node_id": 5,
+          "latitude": 21.0,
+          "longitude": 79.25,
+          "value": 23.171960449218773
+        },
+        {
+          "node_id": 6,
+          "latitude": 21.0,
+          "longitude": 79.5,
+          "value": 23.447351074218773
+        },
+        {
+          "node_id": 7,
+          "latitude": 21.0,
+          "longitude": 79.75,
+          "value": 23.896569824218773
+        },
+        {
+          "node_id": 8,
+          "latitude": 21.0,
+          "longitude": 80.0,
+          "value": 23.693444824218773
+        },
+        {
+          "node_id": 9,
+          "latitude": 20.75,
+          "longitude": 78.0,
+          "value": 20.535241699218773
+        },
+        {
+          "node_id": 10,
+          "latitude": 20.75,
+          "longitude": 78.25,
+          "value": 21.498132324218773
+        },
+        {
+          "node_id": 11,
+          "latitude": 20.75,
+          "longitude": 78.5,
+          "value": 22.431726074218773
+        },
+        {
+          "node_id": 12,
+          "latitude": 20.75,
+          "longitude": 78.75,
+          "value": 23.091882324218773
+        },
+        {
+          "node_id": 13,
+          "latitude": 20.75,
+          "longitude": 79.0,
+          "value": 23.420007324218773
+        },
+        {
+          "node_id": 14,
+          "latitude": 20.75,
+          "longitude": 79.25,
+          "value": 23.388757324218773
+        },
+        {
+          "node_id": 15,
+          "latitude": 20.75,
+          "longitude": 79.5,
+          "value": 23.800866699218773
+        },
+        {
+          "node_id": 16,
+          "latitude": 20.75,
+          "longitude": 79.75,
+          "value": 24.296960449218773
+        },
+        {
+          "node_id": 17,
+          "latitude": 20.75,
+          "longitude": 80.0,
+          "value": 24.343835449218773
+        },
+        {
+          "node_id": 18,
+          "latitude": 20.5,
+          "longitude": 78.0,
+          "value": 20.744226074218773
+        },
+        {
+          "node_id": 19,
+          "latitude": 20.5,
+          "longitude": 78.25,
+          "value": 21.783288574218773
+        },
+        {
+          "node_id": 20,
+          "latitude": 20.5,
+          "longitude": 78.5,
+          "value": 22.996179199218773
+        },
+        {
+          "node_id": 21,
+          "latitude": 20.5,
+          "longitude": 78.75,
+          "value": 23.724694824218773
+        },
+        {
+          "node_id": 22,
+          "latitude": 20.5,
+          "longitude": 79.0,
+          "value": 23.951257324218773
+        },
+        {
+          "node_id": 23,
+          "latitude": 20.5,
+          "longitude": 79.25,
+          "value": 23.869226074218773
+        },
+        {
+          "node_id": 24,
+          "latitude": 20.5,
+          "longitude": 79.5,
+          "value": 24.220788574218773
+        },
+        {
+          "node_id": 25,
+          "latitude": 20.5,
+          "longitude": 79.75,
+          "value": 24.568444824218773
+        },
+        {
+          "node_id": 26,
+          "latitude": 20.5,
+          "longitude": 80.0,
+          "value": 24.722741699218773
+        },
+        {
+          "node_id": 27,
+          "latitude": 20.25,
+          "longitude": 78.0,
+          "value": 21.242272949218773
+        },
+        {
+          "node_id": 28,
+          "latitude": 20.25,
+          "longitude": 78.25,
+          "value": 22.505944824218773
+        },
+        {
+          "node_id": 29,
+          "latitude": 20.25,
+          "longitude": 78.5,
+          "value": 23.615319824218773
+        },
+        {
+          "node_id": 30,
+          "latitude": 20.25,
+          "longitude": 78.75,
+          "value": 24.021569824218773
+        },
+        {
+          "node_id": 31,
+          "latitude": 20.25,
+          "longitude": 79.0,
+          "value": 24.408288574218773
+        },
+        {
+          "node_id": 32,
+          "latitude": 20.25,
+          "longitude": 79.25,
+          "value": 24.461022949218773
+        },
+        {
+          "node_id": 33,
+          "latitude": 20.25,
+          "longitude": 79.5,
+          "value": 24.728601074218773
+        },
+        {
+          "node_id": 34,
+          "latitude": 20.25,
+          "longitude": 79.75,
+          "value": 25.074304199218773
+        },
+        {
+          "node_id": 35,
+          "latitude": 20.25,
+          "longitude": 80.0,
+          "value": 25.587976074218773
+        },
+        {
+          "node_id": 36,
+          "latitude": 20.0,
+          "longitude": 78.0,
+          "value": 22.236413574218773
+        },
+        {
+          "node_id": 37,
+          "latitude": 20.0,
+          "longitude": 78.25,
+          "value": 23.652429199218773
+        },
+        {
+          "node_id": 38,
+          "latitude": 20.0,
+          "longitude": 78.5,
+          "value": 24.332116699218773
+        },
+        {
+          "node_id": 39,
+          "latitude": 20.0,
+          "longitude": 78.75,
+          "value": 24.394616699218773
+        },
+        {
+          "node_id": 40,
+          "latitude": 20.0,
+          "longitude": 79.0,
+          "value": 24.925866699218773
+        },
+        {
+          "node_id": 41,
+          "latitude": 20.0,
+          "longitude": 79.25,
+          "value": 25.171960449218773
+        },
+        {
+          "node_id": 42,
+          "latitude": 20.0,
+          "longitude": 79.5,
+          "value": 25.339929199218773
+        },
+        {
+          "node_id": 43,
+          "latitude": 20.0,
+          "longitude": 79.75,
+          "value": 25.656335449218773
+        },
+        {
+          "node_id": 44,
+          "latitude": 20.0,
+          "longitude": 80.0,
+          "value": 26.171960449218773
+        }
+      ],
+      "anomalies": [
+        {
+          "node_id": 0,
+          "variable": "temperature",
+          "time": "2015-01-01T06:00",
+          "latitude": 21.0,
+          "longitude": 78.0,
+          "value": 20.306726074218773,
+          "baseline_mean": 24.835791803175404,
+          "baseline_standard_deviation": 2.039382850708751,
+          "absolute_anomaly": -4.529065728956631,
+          "standardized_anomaly": -2.220802105589265,
+          "is_anomaly": true,
+          "severity": "moderate",
+          "category": "extreme_cold",
+          "direction": "negative",
+          "is_extreme": false
+        },
+        {
+          "node_id": 9,
+          "variable": "temperature",
+          "time": "2015-01-01T06:00",
+          "latitude": 20.75,
+          "longitude": 78.0,
+          "value": 20.535241699218773,
+          "baseline_mean": 25.115428899949595,
+          "baseline_standard_deviation": 2.1283007123201987,
+          "absolute_anomaly": -4.580187200730823,
+          "standardized_anomaly": -2.1520394999716292,
+          "is_anomaly": true,
+          "severity": "moderate",
+          "category": "extreme_cold",
+          "direction": "negative",
+          "is_extreme": false
+        },
+        {
+          "node_id": 18,
+          "variable": "temperature",
+          "time": "2015-01-01T06:00",
+          "latitude": 20.5,
+          "longitude": 78.0,
+          "value": 20.744226074218773,
+          "baseline_mean": 25.70897728704637,
+          "baseline_standard_deviation": 2.2678760347465983,
+          "absolute_anomaly": -4.964751212827597,
+          "standardized_anomaly": -2.189163400803931,
+          "is_anomaly": true,
+          "severity": "moderate",
+          "category": "extreme_cold",
+          "direction": "negative",
+          "is_extreme": false
+        },
+        {
+          "node_id": 27,
+          "variable": "temperature",
+          "time": "2015-01-01T06:00",
+          "latitude": 20.25,
+          "longitude": 78.0,
+          "value": 21.242272949218773,
+          "baseline_mean": 25.967457629788306,
+          "baseline_standard_deviation": 2.1675421628711296,
+          "absolute_anomaly": -4.725184680569534,
+          "standardized_anomaly": -2.1799735947514614,
+          "is_anomaly": true,
+          "severity": "moderate",
+          "category": "extreme_cold",
+          "direction": "negative",
+          "is_extreme": false
+        }
+      ],
+      "regions": [
+        {
+          "region_id": 0,
+          "time": "2015-01-01T06:00",
+          "category": "extreme_cold",
+          "node_ids": [
+            0,
+            9,
+            18,
+            27
+          ],
+          "nodes": [
+            {
+              "node_id": 0,
+              "latitude": 21.0,
+              "longitude": 78.0
+            },
+            {
+              "node_id": 9,
+              "latitude": 20.75,
+              "longitude": 78.0
+            },
+            {
+              "node_id": 18,
+              "latitude": 20.5,
+              "longitude": 78.0
+            },
+            {
+              "node_id": 27,
+              "latitude": 20.25,
+              "longitude": 78.0
+            }
+          ],
+          "min_latitude": 20.25,
+          "max_latitude": 21.0,
+          "min_longitude": 78.0,
+          "max_longitude": 78.0,
+          "node_count": 4,
+          "latitude_span": 0.75,
+          "longitude_span": 0.0,
+          "min_value": 20.306726074218773,
+          "max_value": 21.242272949218773,
+          "mean_value": 20.707116699218773,
+          "min_standardized_anomaly": -2.220802105589265,
+          "max_standardized_anomaly": -2.1520394999716292,
+          "mean_standardized_anomaly": -2.1854946502790717
+        }
+      ],
+      "tracks": [],
+      "events": []
+    },
+    {
+      "time": "2015-01-01T12:00",
+      "variable": "temperature",
+      "values": [
+        {
+          "node_id": 0,
+          "latitude": 21.0,
+          "longitude": 78.0,
+          "value": 20.144738769531273
+        },
+        {
+          "node_id": 1,
+          "latitude": 21.0,
+          "longitude": 78.25,
+          "value": 20.554895019531273
+        },
+        {
+          "node_id": 2,
+          "latitude": 21.0,
+          "longitude": 78.5,
+          "value": 21.599816894531273
+        },
+        {
+          "node_id": 3,
+          "latitude": 21.0,
+          "longitude": 78.75,
+          "value": 23.019738769531273
+        },
+        {
+          "node_id": 4,
+          "latitude": 21.0,
+          "longitude": 79.0,
+          "value": 23.750207519531273
+        },
+        {
+          "node_id": 5,
+          "latitude": 21.0,
+          "longitude": 79.25,
+          "value": 24.064660644531273
+        },
+        {
+          "node_id": 6,
+          "latitude": 21.0,
+          "longitude": 79.5,
+          "value": 24.447473144531273
+        },
+        {
+          "node_id": 7,
+          "latitude": 21.0,
+          "longitude": 79.75,
+          "value": 24.883020019531273
+        },
+        {
+          "node_id": 8,
+          "latitude": 21.0,
+          "longitude": 80.0,
+          "value": 24.330285644531273
+        },
+        {
+          "node_id": 9,
+          "latitude": 20.75,
+          "longitude": 78.0,
+          "value": 21.070520019531273
+        },
+        {
+          "node_id": 10,
+          "latitude": 20.75,
+          "longitude": 78.25,
+          "value": 21.861535644531273
+        },
+        {
+          "node_id": 11,
+          "latitude": 20.75,
+          "longitude": 78.5,
+          "value": 23.156457519531273
+        },
+        {
+          "node_id": 12,
+          "latitude": 20.75,
+          "longitude": 78.75,
+          "value": 24.183801269531273
+        },
+        {
+          "node_id": 13,
+          "latitude": 20.75,
+          "longitude": 79.0,
+          "value": 24.441613769531273
+        },
+        {
+          "node_id": 14,
+          "latitude": 20.75,
+          "longitude": 79.25,
+          "value": 24.140832519531273
+        },
+        {
+          "node_id": 15,
+          "latitude": 20.75,
+          "longitude": 79.5,
+          "value": 24.851770019531273
+        },
+        {
+          "node_id": 16,
+          "latitude": 20.75,
+          "longitude": 79.75,
+          "value": 25.562707519531273
+        },
+        {
+          "node_id": 17,
+          "latitude": 20.75,
+          "longitude": 80.0,
+          "value": 25.261926269531273
+        },
+        {
+          "node_id": 18,
+          "latitude": 20.5,
+          "longitude": 78.0,
+          "value": 22.054895019531273
+        },
+        {
+          "node_id": 19,
+          "latitude": 20.5,
+          "longitude": 78.25,
+          "value": 22.894738769531273
+        },
+        {
+          "node_id": 20,
+          "latitude": 20.5,
+          "longitude": 78.5,
+          "value": 24.170129394531273
+        },
+        {
+          "node_id": 21,
+          "latitude": 20.5,
+          "longitude": 78.75,
+          "value": 24.812707519531273
+        },
+        {
+          "node_id": 22,
+          "latitude": 20.5,
+          "longitude": 79.0,
+          "value": 24.832238769531273
+        },
+        {
+          "node_id": 23,
+          "latitude": 20.5,
+          "longitude": 79.25,
+          "value": 24.476770019531273
+        },
+        {
+          "node_id": 24,
+          "latitude": 20.5,
+          "longitude": 79.5,
+          "value": 25.027551269531273
+        },
+        {
+          "node_id": 25,
+          "latitude": 20.5,
+          "longitude": 79.75,
+          "value": 25.980676269531273
+        },
+        {
+          "node_id": 26,
+          "latitude": 20.5,
+          "longitude": 80.0,
+          "value": 25.906457519531273
+        },
+        {
+          "node_id": 27,
+          "latitude": 20.25,
+          "longitude": 78.0,
+          "value": 23.011926269531273
+        },
+        {
+          "node_id": 28,
+          "latitude": 20.25,
+          "longitude": 78.25,
+          "value": 23.849816894531273
+        },
+        {
+          "node_id": 29,
+          "latitude": 20.25,
+          "longitude": 78.5,
+          "value": 24.916223144531273
+        },
+        {
+          "node_id": 30,
+          "latitude": 20.25,
+          "longitude": 78.75,
+          "value": 25.189660644531273
+        },
+        {
+          "node_id": 31,
+          "latitude": 20.25,
+          "longitude": 79.0,
+          "value": 25.236535644531273
+        },
+        {
+          "node_id": 32,
+          "latitude": 20.25,
+          "longitude": 79.25,
+          "value": 25.078332519531273
+        },
+        {
+          "node_id": 33,
+          "latitude": 20.25,
+          "longitude": 79.5,
+          "value": 25.597863769531273
+        },
+        {
+          "node_id": 34,
+          "latitude": 20.25,
+          "longitude": 79.75,
+          "value": 26.552941894531273
+        },
+        {
+          "node_id": 35,
+          "latitude": 20.25,
+          "longitude": 80.0,
+          "value": 26.756066894531273
+        },
+        {
+          "node_id": 36,
+          "latitude": 20.0,
+          "longitude": 78.0,
+          "value": 24.013879394531273
+        },
+        {
+          "node_id": 37,
+          "latitude": 20.0,
+          "longitude": 78.25,
+          "value": 25.000207519531273
+        },
+        {
+          "node_id": 38,
+          "latitude": 20.0,
+          "longitude": 78.5,
+          "value": 25.252160644531273
+        },
+        {
+          "node_id": 39,
+          "latitude": 20.0,
+          "longitude": 78.75,
+          "value": 25.394738769531273
+        },
+        {
+          "node_id": 40,
+          "latitude": 20.0,
+          "longitude": 79.0,
+          "value": 25.656457519531273
+        },
+        {
+          "node_id": 41,
+          "latitude": 20.0,
+          "longitude": 79.25,
+          "value": 26.375207519531273
+        },
+        {
+          "node_id": 42,
+          "latitude": 20.0,
+          "longitude": 79.5,
+          "value": 26.750207519531273
+        },
+        {
+          "node_id": 43,
+          "latitude": 20.0,
+          "longitude": 79.75,
+          "value": 26.777551269531273
+        },
+        {
+          "node_id": 44,
+          "latitude": 20.0,
+          "longitude": 80.0,
+          "value": 26.978723144531273
+        }
+      ],
+      "anomalies": [
+        {
+          "node_id": 0,
+          "variable": "temperature",
+          "time": "2015-01-01T12:00",
+          "latitude": 21.0,
+          "longitude": 78.0,
+          "value": 20.144738769531273,
+          "baseline_mean": 26.388240494266633,
+          "baseline_standard_deviation": 1.977775457432519,
+          "absolute_anomaly": -6.24350172473536,
+          "standardized_anomaly": -3.156830418373409,
+          "is_anomaly": true,
+          "severity": "severe",
+          "category": "extreme_cold",
+          "direction": "negative",
+          "is_extreme": false
+        },
+        {
+          "node_id": 1,
+          "variable": "temperature",
+          "time": "2015-01-01T12:00",
+          "latitude": 21.0,
+          "longitude": 78.25,
+          "value": 20.554895019531273,
+          "baseline_mean": 26.435531320879537,
+          "baseline_standard_deviation": 1.9840259086743364,
+          "absolute_anomaly": -5.8806363013482645,
+          "standardized_anomaly": -2.9639916876274666,
+          "is_anomaly": true,
+          "severity": "moderate",
+          "category": "extreme_cold",
+          "direction": "negative",
+          "is_extreme": false
+        },
+        {
+          "node_id": 2,
+          "variable": "temperature",
+          "time": "2015-01-01T12:00",
+          "latitude": 21.0,
+          "longitude": 78.5,
+          "value": 21.599816894531273,
+          "baseline_mean": 26.461136159589213,
+          "baseline_standard_deviation": 1.8843014802836648,
+          "absolute_anomaly": -4.86131926505794,
+          "standardized_anomaly": -2.5799052412388446,
+          "is_anomaly": true,
+          "severity": "moderate",
+          "category": "extreme_cold",
+          "direction": "negative",
+          "is_extreme": false
+        },
+        {
+          "node_id": 9,
+          "variable": "temperature",
+          "time": "2015-01-01T12:00",
+          "latitude": 20.75,
+          "longitude": 78.0,
+          "value": 21.070520019531273,
+          "baseline_mean": 26.481511663621472,
+          "baseline_standard_deviation": 1.9659080367240582,
+          "absolute_anomaly": -5.410991644090199,
+          "standardized_anomaly": -2.7524134105005977,
+          "is_anomaly": true,
+          "severity": "moderate",
+          "category": "extreme_cold",
+          "direction": "negative",
+          "is_extreme": false
+        },
+        {
+          "node_id": 10,
+          "variable": "temperature",
+          "time": "2015-01-01T12:00",
+          "latitude": 20.75,
+          "longitude": 78.25,
+          "value": 21.861535644531273,
+          "baseline_mean": 26.536161361202115,
+          "baseline_standard_deviation": 1.8633002410166377,
+          "absolute_anomaly": -4.6746257166708425,
+          "standardized_anomaly": -2.5087882316380283,
+          "is_anomaly": true,
+          "severity": "moderate",
+          "category": "extreme_cold",
+          "direction": "negative",
+          "is_extreme": false
+        },
+        {
+          "node_id": 11,
+          "variable": "temperature",
+          "time": "2015-01-01T12:00",
+          "latitude": 20.75,
+          "longitude": 78.5,
+          "value": 23.156457519531273,
+          "baseline_mean": 26.851912369266632,
+          "baseline_standard_deviation": 1.8052329492228751,
+          "absolute_anomaly": -3.695454849735359,
+          "standardized_anomaly": -2.047079215635963,
+          "is_anomaly": true,
+          "severity": "moderate",
+          "category": "extreme_cold",
+          "direction": "negative",
+          "is_extreme": false
+        },
+        {
+          "node_id": 18,
+          "variable": "temperature",
+          "time": "2015-01-01T12:00",
+          "latitude": 20.5,
+          "longitude": 78.0,
+          "value": 22.054895019531273,
+          "baseline_mean": 27.064891199911795,
+          "baseline_standard_deviation": 2.2654199877310734,
+          "absolute_anomaly": -5.009996180380522,
+          "standardized_anomaly": -2.211508774317063,
+          "is_anomaly": true,
+          "severity": "moderate",
+          "category": "extreme_cold",
+          "direction": "negative",
+          "is_extreme": false
+        },
+        {
+          "node_id": 19,
+          "variable": "temperature",
+          "time": "2015-01-01T12:00",
+          "latitude": 20.5,
+          "longitude": 78.25,
+          "value": 22.894738769531273,
+          "baseline_mean": 27.185354909589215,
+          "baseline_standard_deviation": 2.1314341151292404,
+          "absolute_anomaly": -4.290616140057942,
+          "standardized_anomaly": -2.013018422480199,
+          "is_anomaly": true,
+          "severity": "moderate",
+          "category": "extreme_cold",
+          "direction": "negative",
+          "is_extreme": false
+        }
+      ],
+      "regions": [
+        {
+          "region_id": 0,
+          "time": "2015-01-01T12:00",
+          "category": "extreme_cold",
+          "node_ids": [
+            0,
+            1,
+            2,
+            11,
+            10,
+            19,
+            18,
+            9
+          ],
+          "nodes": [
+            {
+              "node_id": 0,
+              "latitude": 21.0,
+              "longitude": 78.0
+            },
+            {
+              "node_id": 1,
+              "latitude": 21.0,
+              "longitude": 78.25
+            },
+            {
+              "node_id": 2,
+              "latitude": 21.0,
+              "longitude": 78.5
+            },
+            {
+              "node_id": 11,
+              "latitude": 20.75,
+              "longitude": 78.5
+            },
+            {
+              "node_id": 10,
+              "latitude": 20.75,
+              "longitude": 78.25
+            },
+            {
+              "node_id": 19,
+              "latitude": 20.5,
+              "longitude": 78.25
+            },
+            {
+              "node_id": 18,
+              "latitude": 20.5,
+              "longitude": 78.0
+            },
+            {
+              "node_id": 9,
+              "latitude": 20.75,
+              "longitude": 78.0
+            }
+          ],
+          "min_latitude": 20.5,
+          "max_latitude": 21.0,
+          "min_longitude": 78.0,
+          "max_longitude": 78.5,
+          "node_count": 8,
+          "latitude_span": 0.5,
+          "longitude_span": 0.5,
+          "min_value": 20.144738769531273,
+          "max_value": 23.156457519531273,
+          "mean_value": 21.667199707031273,
+          "min_standardized_anomaly": -3.156830418373409,
+          "max_standardized_anomaly": -2.013018422480199,
+          "mean_standardized_anomaly": -2.5291919252264465
+        }
+      ],
+      "tracks": [],
+      "events": []
+    },
+    {
+      "time": "2015-01-01T18:00",
+      "variable": "temperature",
+      "values": [
+        {
+          "node_id": 0,
+          "latitude": 21.0,
+          "longitude": 78.0,
+          "value": 18.508935546875023
+        },
+        {
+          "node_id": 1,
+          "latitude": 21.0,
+          "longitude": 78.25,
+          "value": 18.735498046875023
+        },
+        {
+          "node_id": 2,
+          "latitude": 21.0,
+          "longitude": 78.5,
+          "value": 19.067529296875023
+        },
+        {
+          "node_id": 3,
+          "latitude": 21.0,
+          "longitude": 78.75,
+          "value": 19.253076171875023
+        },
+        {
+          "node_id": 4,
+          "latitude": 21.0,
+          "longitude": 79.0,
+          "value": 19.745263671875023
+        },
+        {
+          "node_id": 5,
+          "latitude": 21.0,
+          "longitude": 79.25,
+          "value": 20.315576171875023
+        },
+        {
+          "node_id": 6,
+          "latitude": 21.0,
+          "longitude": 79.5,
+          "value": 21.008935546875023
+        },
+        {
+          "node_id": 7,
+          "latitude": 21.0,
+          "longitude": 79.75,
+          "value": 21.579248046875023
+        },
+        {
+          "node_id": 8,
+          "latitude": 21.0,
+          "longitude": 80.0,
+          "value": 21.561669921875023
+        },
+        {
+          "node_id": 9,
+          "latitude": 20.75,
+          "longitude": 78.0,
+          "value": 18.872216796875023
+        },
+        {
+          "node_id": 10,
+          "latitude": 20.75,
+          "longitude": 78.25,
+          "value": 19.243310546875023
+        },
+        {
+          "node_id": 11,
+          "latitude": 20.75,
+          "longitude": 78.5,
+          "value": 19.774560546875023
+        },
+        {
+          "node_id": 12,
+          "latitude": 20.75,
+          "longitude": 78.75,
+          "value": 20.124169921875023
+        },
+        {
+          "node_id": 13,
+          "latitude": 20.75,
+          "longitude": 79.0,
+          "value": 20.348779296875023
+        },
+        {
+          "node_id": 14,
+          "latitude": 20.75,
+          "longitude": 79.25,
+          "value": 20.758935546875023
+        },
+        {
+          "node_id": 15,
+          "latitude": 20.75,
+          "longitude": 79.5,
+          "value": 21.358544921875023
+        },
+        {
+          "node_id": 16,
+          "latitude": 20.75,
+          "longitude": 79.75,
+          "value": 21.940576171875023
+        },
+        {
+          "node_id": 17,
+          "latitude": 20.75,
+          "longitude": 80.0,
+          "value": 21.946435546875023
+        },
+        {
+          "node_id": 18,
+          "latitude": 20.5,
+          "longitude": 78.0,
+          "value": 19.102685546875023
+        },
+        {
+          "node_id": 19,
+          "latitude": 20.5,
+          "longitude": 78.25,
+          "value": 19.450341796875023
+        },
+        {
+          "node_id": 20,
+          "latitude": 20.5,
+          "longitude": 78.5,
+          "value": 19.993310546875023
+        },
+        {
+          "node_id": 21,
+          "latitude": 20.5,
+          "longitude": 78.75,
+          "value": 20.403466796875023
+        },
+        {
+          "node_id": 22,
+          "latitude": 20.5,
+          "longitude": 79.0,
+          "value": 20.657373046875023
+        },
+        {
+          "node_id": 23,
+          "latitude": 20.5,
+          "longitude": 79.25,
+          "value": 21.090966796875023
+        },
+        {
+          "node_id": 24,
+          "latitude": 20.5,
+          "longitude": 79.5,
+          "value": 21.682763671875023
+        },
+        {
+          "node_id": 25,
+          "latitude": 20.5,
+          "longitude": 79.75,
+          "value": 22.286279296875023
+        },
+        {
+          "node_id": 26,
+          "latitude": 20.5,
+          "longitude": 80.0,
+          "value": 22.342919921875023
+        },
+        {
+          "node_id": 27,
+          "latitude": 20.25,
+          "longitude": 78.0,
+          "value": 19.335107421875023
+        },
+        {
+          "node_id": 28,
+          "latitude": 20.25,
+          "longitude": 78.25,
+          "value": 19.774560546875023
+        },
+        {
+          "node_id": 29,
+          "latitude": 20.25,
+          "longitude": 78.5,
+          "value": 20.229638671875023
+        },
+        {
+          "node_id": 30,
+          "latitude": 20.25,
+          "longitude": 78.75,
+          "value": 20.495263671875023
+        },
+        {
+          "node_id": 31,
+          "latitude": 20.25,
+          "longitude": 79.0,
+          "value": 20.833154296875023
+        },
+        {
+          "node_id": 32,
+          "latitude": 20.25,
+          "longitude": 79.25,
+          "value": 21.253076171875023
+        },
+        {
+          "node_id": 33,
+          "latitude": 20.25,
+          "longitude": 79.5,
+          "value": 22.026513671875023
+        },
+        {
+          "node_id": 34,
+          "latitude": 20.25,
+          "longitude": 79.75,
+          "value": 22.633935546875023
+        },
+        {
+          "node_id": 35,
+          "latitude": 20.25,
+          "longitude": 80.0,
+          "value": 22.813623046875023
+        },
+        {
+          "node_id": 36,
+          "latitude": 20.0,
+          "longitude": 78.0,
+          "value": 19.758935546875023
+        },
+        {
+          "node_id": 37,
+          "latitude": 20.0,
+          "longitude": 78.25,
+          "value": 20.313623046875023
+        },
+        {
+          "node_id": 38,
+          "latitude": 20.0,
+          "longitude": 78.5,
+          "value": 20.518701171875023
+        },
+        {
+          "node_id": 39,
+          "latitude": 20.0,
+          "longitude": 78.75,
+          "value": 20.620263671875023
+        },
+        {
+          "node_id": 40,
+          "latitude": 20.0,
+          "longitude": 79.0,
+          "value": 20.909326171875023
+        },
+        {
+          "node_id": 41,
+          "latitude": 20.0,
+          "longitude": 79.25,
+          "value": 21.153466796875023
+        },
+        {
+          "node_id": 42,
+          "latitude": 20.0,
+          "longitude": 79.5,
+          "value": 21.967919921875023
+        },
+        {
+          "node_id": 43,
+          "latitude": 20.0,
+          "longitude": 79.75,
+          "value": 22.684716796875023
+        },
+        {
+          "node_id": 44,
+          "latitude": 20.0,
+          "longitude": 80.0,
+          "value": 22.866357421875023
+        }
+      ],
+      "anomalies": [],
+      "regions": [],
+      "tracks": [],
+      "events": []
+    }
+  ],
+  "tracks": [
+    {
+      "track_id": 0,
+      "category": "extreme_cold",
+      "start_time": "2015-01-01T06:00",
+      "end_time": "2015-01-01T12:00",
+      "region_count": 2,
+      "duration_steps": 2,
+      "regions": [
+        {
+          "region_id": 0,
+          "time": "2015-01-01T06:00",
+          "category": "extreme_cold",
+          "center": {
+            "latitude": 20.625,
+            "longitude": 78.0
+          },
+          "min_latitude": 20.25,
+          "max_latitude": 21.0,
+          "min_longitude": 78.0,
+          "max_longitude": 78.0,
+          "node_count": 4
+        },
+        {
+          "region_id": 0,
+          "time": "2015-01-01T12:00",
+          "category": "extreme_cold",
+          "center": {
+            "latitude": 20.75,
+            "longitude": 78.25
+          },
+          "min_latitude": 20.5,
+          "max_latitude": 21.0,
+          "min_longitude": 78.0,
+          "max_longitude": 78.5,
+          "node_count": 8
+        }
+      ],
+      "parent_track_ids": [],
+      "child_track_ids": [],
+      "merged_into_track_ids": [],
+      "merged_from_track_ids": [],
+      "lifecycle_events": []
+    }
+  ],
+  "events": [
+    {
+      "event_id": 0,
+      "category": "extreme_cold",
+      "start_time": "2015-01-01T06:00",
+      "end_time": "2015-01-01T12:00",
+      "region_count": 2,
+      "duration_steps": 2,
+      "start_location": {
+        "latitude": 20.625,
+        "longitude": 78.0
+      },
+      "end_location": {
+        "latitude": 20.75,
+        "longitude": 78.25
+      },
+      "has_movement": true,
+      "minimum_value": 20.144738769531273,
+      "maximum_value": 23.156457519531273,
+      "minimum_standardized_anomaly": -3.156830418373409,
+      "maximum_standardized_anomaly": -2.013018422480199,
+      "threat_level": "unknown"
+    }
+  ]
+}
