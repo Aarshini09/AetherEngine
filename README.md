@@ -1,461 +1,791 @@
-﻿# AetherEngine
-# Unity + AstraEngine
-## Hybrid Game Development Architecture
+# Dancing with SAR
+### Understanding Earth's Changing Surface Through Radar Observations
 
-**Project Proposal & Technical README**
+**Powered by Earth Twin Engine (ETE) · TerraTrace**
 
-**Status:** Proposed — Pending Team Discussion  
-**Development Target:** 7-Day Prototype  
-**Proposed Technology:** Unity + AstraEngine (C++ Backend)  
-**Game Direction:** EVE-inspired Space Exploration and Scientific Expeditions
+> Earth's surface is never static. It expands, contracts, floods, deforms, grows, and transforms. Dancing with SAR makes these changes visible through time using Synthetic Aperture Radar observations from the NASA-ISRO NISAR mission.
 
 ---
 
-# 1. Introduction
+## 1. Project Overview
 
-This proposal introduces a hybrid game development architecture that combines **Unity as the game development and presentation environment** with **AstraEngine as an independent spatial and simulation backend**.
+**Dancing with SAR** is an interactive geospatial and spatiotemporal visualization platform designed to track, analyze, and communicate changes occurring across Earth's surface using Synthetic Aperture Radar (SAR) observations.
 
-Instead of developing an entire game engine from scratch, the approach is to reuse AstraEngine's existing architectural foundations while relying on Unity for the systems that make game development faster and more practical.
+Developed around the NASA-ISRO Synthetic Aperture Radar (NISAR) mission, the platform aims to transform complex radar measurements into accessible visual representations of environmental and geographical change.
 
-AstraEngine will provide the underlying spatial intelligence, world representation, physics and selected simulation capabilities.
+The application enables users to explore selected geographic regions, examine radar observations acquired at different points in time, compare surface conditions, and visualize changes through an interactive Earth interface and generalized temporal timeline.
 
-Unity will handle the actual game experience, including rendering, assets, UI, graphs, animation, input, scenes and gameplay progression.
+Rather than treating satellite observations as isolated images, Dancing with SAR organizes them into a continuous spatiotemporal representation of Earth's changing surface.
 
-The objective is to establish a reusable architecture that allows the team to develop a functional game prototype without spending the entire development period implementing low-level engine infrastructure.
+The project builds upon the geospatial visualization and temporal data architecture developed for **Avani**, extending its capabilities from atmospheric observation and extreme-weather anomaly tracking toward radar-based Earth surface monitoring.
 
-**Important:** This is a proposed architecture. The final game concept and development direction remain subject to team discussion and approval.
+### Project Identity
 
-# 2. Proposed Game Concept
+| Attribute | Description |
+|---|---|
+| Project Name | Dancing with SAR |
+| Core Engine | Earth Twin Engine (ETE) |
+| Scientific Subsystem | TerraTrace |
+| Primary Data Source | NASA-ISRO NISAR |
+| Scientific Domain | Radar Remote Sensing and Earth Observation |
+| Primary Focus | Spatiotemporal Surface Change Detection |
+| Visualization | Interactive 3D Earth and Temporal Layers |
+| Development Approach | Reuse and extend Avani's existing geospatial infrastructure |
 
-The initial concept is an EVE-inspired scientific space exploration experience.
+---
 
-Humanity has developed the ability to explore distant planetary systems. Players undertake scientific expeditions, investigate discovered planets, design spacecraft and make engineering decisions while completing mission objectives.
+## 2. The Problem
 
-The experience takes inspiration from the scale and exploration mechanics of EVE Online, while focusing on scientific discovery and space mission design.
+Earth is continuously undergoing natural and human-induced transformations.
 
-Potential gameplay elements include:
+These include:
 
-- Exploration of astronomical systems.
-- Navigation between stars and planetary systems.
-- Spacecraft design and configuration.
-- Scientific instrument selection.
-- Mission planning and execution.
-- Resource and engineering management.
-- Planetary observation and data collection.
-- Scientific discoveries and mission reports.
+- Floodplains expanding and contracting.
+- Wetlands experiencing degradation or recovery.
+- Forest structures changing due to deforestation and wildfires.
+- Agricultural landscapes changing through cultivation and soil-moisture variations.
+- Glaciers and sea ice changing over time.
+- Ground surfaces deforming due to earthquakes, subsidence, and other geological processes.
 
-The astronomical universe may use a real exoplanet catalogue as its foundation.
+Although satellite observations provide valuable information about these phenomena, interpreting changes across multiple observations and time periods is not always straightforward.
 
-Observed astronomical properties should remain distinguishable from generated or illustrative planetary environments.
+Traditional satellite-image viewers often present observations as individual images. This makes it difficult for non-specialists and decision-makers to understand how a geographical region evolves over time.
 
-The initial concept is not intended to reproduce EVE Online or implement a full-scale MMO. Its universe navigation and exploration experience serve as inspiration.
+Synthetic Aperture Radar provides an important opportunity to address this limitation.
 
-# 3. Architectural Philosophy
+Unlike optical satellite instruments, SAR actively emits microwave signals and measures the energy reflected from Earth's surface. It can collect observations independently of sunlight and is capable of operating through cloud cover.
 
-The central idea is to separate the underlying simulation architecture from the game presentation architecture.
+However, SAR observations are fundamentally different from conventional optical imagery. Their interpretation requires an understanding of radar backscatter, polarization, surface roughness, dielectric properties, and, for interferometric applications, phase information.
 
-Rather than making AstraEngine responsible for every aspect of the game, each system will have a clearly defined owner.
+**The challenge is therefore not simply displaying radar imagery. It is translating radar observations into meaningful representations of geographical change.**
 
-## 3.1 AstraEngine — Spatial and Simulation Backend
+---
 
-AstraEngine will provide the underlying world and simulation capabilities.
+## 3. Our Approach
 
-Its proposed responsibilities include:
+Dancing with SAR approaches this challenge through a combination of geospatial data management, temporal analysis, radar-specific processing, and interactive visualization.
 
-- Hierarchical Spatial Chunking (HSC).
-- Spatial addressing and world representation.
-- Coordinate systems and reference frames.
-- Physics simulation.
-- Collision detection.
-- Entity and spatial state management.
-- Simulation updates.
-- Astronomical data integration.
-- Spatial queries and region retrieval.
+The central idea is to represent Earth's surface as a collection of geographically located observations evolving through time.
 
-AstraEngine should remain independent of Unity-specific and Unreal-specific classes.
+Every observation is associated with:
 
-Its internal implementation should not depend on a particular game engine or graphics API.
+- Geographic location or spatial footprint.
+- Acquisition timestamp.
+- Radar acquisition characteristics.
+- Polarization information, where applicable.
+- Backscatter or other relevant measurement values.
+- Processing and quality metadata.
 
-## 3.2 Unity — Game Runtime and Presentation
+These observations are organized into temporal sequences and spatial layers.
 
-Unity will provide the game development environment and handle the presentation layer.
+Users can then explore how a selected region changes across successive observations.
 
-Its responsibilities include:
+### Core Workflow
 
-- Game loop and runtime management.
-- Scene management.
-- 3D rendering.
-- Models, materials and textures.
-- Planetary environments.
-- Spacecraft assets.
-- Camera and player interaction.
-- User interface.
-- Mission dashboards and graphs.
-- Animation and audio.
-- Gameplay progression.
-- Story and mission presentation.
+1. **Study Area Selection**
 
-Unity will receive the required spatial and simulation information from AstraEngine and use it to update the game world.
+   Select a geographic region of interest, such as a flood-prone region, wetland, agricultural landscape, forest, or earthquake-affected area.
 
-## 3.3 Team Responsibilities
+2. **SAR Data Acquisition**
 
-The development team will focus on the actual game experience:
+   Retrieve suitable NISAR observations using the data resources provided by NASA and the challenge.
 
-- Story and universe design.
-- Mission objectives.
-- Spacecraft concepts.
-- Scientific content.
-- Visual assets.
-- UI and gameplay design.
-- Testing and feedback.
+3. **Data Preparation**
 
-The objective is to make the project modular enough that team members can work on different areas without needing to modify AstraEngine's internal implementation.
+   Decode the selected product, inspect its metadata, prepare its spatial reference, and extract the measurements needed for visualization.
 
-# 4. Proposed System Architecture
-
-```text
-                  SPACE EXPLORATION GAME
-                           |
-                           |
-                  UNITY GAME RUNTIME
-                           |
-        +------------------+------------------+
-        |                  |                  |
-     Rendering          Gameplay            UI/UX
-        |                  |                  |
-     Assets             Missions           Graphs
-     Materials          Story              Dashboards
-     Animation          Input              Reports
-     Audio              Scenes             Controls
-        |                  |                  |
-        +------------------+------------------+
-                           |
-                   ASTRA INTEGRATION
-                           |
-                 Native C++ Library / DLL
-                           |
-                    ASTRA ENGINE
-                           |
-        +------------------+------------------+
-        |                  |                  |
-       HSC               Physics           Collision
-        |                  |                  |
-    Spatial World      Simulation       Detection
-        |
-    Coordinates
-        |
-    World Queries
-        |
-    Astronomical Data
-```
-
-The integration layer will act as the communication boundary between Unity and AstraEngine.
-
-Unity should not need to understand the internal implementation of HSC, physics or collision.
-
-It should interact with a defined public interface.
-
-# 5. AstraEngine Integration Strategy
-
-The proposed initial integration method is a native C++ shared library.
-
-AstraEngine will be compiled into a Windows DLL, which can be loaded by Unity.
-
-Unity's C# environment can communicate with the DLL through P/Invoke.
-
-A small public API will expose the required backend functionality.
-
-Illustrative API:
-
-```cpp
-Astra_Initialize();
-Astra_LoadWorld();
-Astra_Update(deltaTime);
-
-Astra_QuerySpatialRegion(...);
-Astra_GetEntityState(...);
-
-Astra_Shutdown();
-```
-
-These are illustrative interface names. The actual API will be designed around AstraEngine's existing modules and ownership rules.
-
-## 5.1 Proposed Integration Components
-
-```text
-AstraEngine/
-|
-+-- Core/
-+-- Spatial/
-|   +-- HSC/
-|   +-- Coordinates/
-|   +-- World/
-|
-+-- Physics/
-+-- Collision/
-+-- Simulation/
-+-- Data/
-|
-+-- Integration/
-    +-- PublicAPI/
-    +-- APIImplementation/
-    +-- AstraSDK/
-```
-
-Unity-side integration:
-
-```text
-UnityProject/
-|
-+-- Assets/
-|
-+-- Plugins/
-|   +-- AstraEngine.dll
-|
-+-- Scripts/
-|   +-- AstraBridge/
-|   +-- World/
-|   +-- Spatial/
-|   +-- Gameplay/
-|
-+-- Scenes/
-+-- UI/
-+-- Missions/
-+-- Spacecraft/
-+-- Environments/
-```
-
-## 5.2 Future Engine Compatibility
-
-The integration should be designed so that the same AstraEngine backend can eventually support other frontend applications.
-
-Potential future integrations:
-
-- Unity.
-- Unreal Engine.
-- Standalone Vulkan applications.
-- Other native C++ applications.
-
-Each frontend would require its own adapter or plugin.
-
-The underlying spatial and simulation systems would remain independent.
-
-This is a long-term architectural objective, not a requirement for the initial prototype.
-
-# 6. Simulation and Game Loop
-
-Unity will control the main game runtime and determine when AstraEngine receives updates.
-
-AstraEngine will maintain its own internal simulation state and timestep.
-
-Proposed execution flow:
-
-```text
-Unity Game Loop
-      |
-      v
-Player Input
-      |
-      v
-Astra Commands
-      |
-      v
-Astra Simulation Update
-      |
-      +---- HSC
-      |
-      +---- Physics
-      |
-      +---- Collision
-      |
-      v
-Simulation State Extraction
-      |
-      v
-Unity World Synchronization
-      |
-      v
-Rendering and UI Updates
-```
-
-A fixed simulation timestep should be used for physics where appropriate, with rendering allowed to run independently.
-
-The architecture must define authoritative ownership of simulation state to prevent Unity and AstraEngine from independently controlling the same physical properties.
-
-# 7. Initial Gameplay Workflow
-
-The first playable experience should demonstrate one complete scientific expedition.
-
-Proposed mission workflow:
-
-1. **Universe Navigation** — Explore the astronomical catalogue.
-2. **Target Selection** — Select a discovered planetary system.
-3. **Scientific Briefing** — Review the target's known properties and mission objectives.
-4. **Spacecraft Design** — Configure the spacecraft and its subsystems.
-5. **Payload Configuration** — Select scientific instruments.
-6. **Engineering Validation** — Check mass, power, propulsion and communication constraints.
-7. **Mission Launch** — Begin the mission.
-8. **Space Navigation** — Travel towards the selected target.
-9. **Scientific Observation** — Collect simulated scientific measurements.
-10. **Mission Evaluation** — Evaluate objectives and engineering performance.
-11. **Mission Report** — Present collected data and mission results.
-
-This workflow can be expanded later with additional mission types, planetary environments and exploration mechanics.
-
-# 8. Seven-Day Prototype Development Plan
-
-The proposed development window is seven days of focused development.
-
-The objective is a demonstrable prototype, not a complete commercial game.
-
-| Day | Development Focus | Expected Deliverable |
-|---|---|---|
-| 1 | Astra DLL, public API and Unity integration | Unity successfully communicates with Astra |
-| 2 | HSC integration, coordinates and astronomical catalogue | Basic universe navigation |
-| 3 | Unity assets, spacecraft and planetary environments | Initial 3D game environment |
-| 4 | Spacecraft configuration and mission UI | Functional design interface |
-| 5 | Simulation and resource management | Executable mission |
-| 6 | Scientific objectives and evaluation | Complete mission workflow |
-| 7 | Testing, debugging and packaging | Demonstrable prototype |
-
-This schedule assumes that AstraEngine's existing systems are usable, the HSC is sufficiently stable for integration, and most visual assets are sourced or adapted rather than modelled from scratch.
-
-# 9. Prototype Scope
-
-## Included in the initial prototype
-
-- AstraEngine native integration.
-- HSC-backed spatial queries.
-- Astronomical catalogue integration.
-- Basic universe navigation.
-- Planetary system selection.
-- Spacecraft configuration.
-- Mission interface.
-- Resource management.
-- Simplified mission simulation.
-- Scientific observation.
-- Mission evaluation and reporting.
-
-## Postponed features
-
-The following features should not be part of the initial seven-day target:
-
-- Full MMO infrastructure.
-- Multiplayer and cooperative gameplay.
-- Persistent player economy.
-- Large-scale fleet warfare.
-- Advanced procedural galaxy generation.
-- High-fidelity spacecraft engineering.
-- Complex planetary surface simulation.
-- Full engine editor development.
-- Multiple graphics backends.
-- Advanced AI mission generation.
-
-These can be considered in future development if the project direction and available time justify them.
-
-# 10. Important Technical Considerations
-
-Several areas require careful implementation.
-
-### Coordinate Systems
-
-Astronomical coordinates and local rendering coordinates operate at very different scales.
-
-AstraEngine should handle authoritative spatial coordinates and reference frames. Unity should receive suitable local or camera-relative coordinates for rendering.
-
-### Physics Ownership
-
-AstraEngine and Unity must not independently simulate the same physical object.
-
-The team must establish whether Astra or Unity owns each object's authoritative physics state.
-
-### Memory and DLL Boundaries
-
-The public API should define:
-
-- Memory ownership.
-- Error handling.
-- Thread safety.
-- Data structure compatibility.
-- API versioning.
-- Initialization and shutdown behavior.
-
-### Performance
-
-High-frequency simulation data should use efficient native data exchange rather than repeatedly serializing large JSON structures.
-
-### Visual Assets
-
-Unity will own visual assets and their presentation. AstraEngine should not require Unity-specific asset types.
-
-### Scientific Accuracy
-
-Real astronomical catalogue values should be retained and labelled as observed data. Generated planetary surfaces, environments and other speculative properties must be identified as illustrative.
-
-# 11. Team Handoff and Development
-
-One of the main goals is to establish a reusable Unity project that can be shared with other team members.
-
-The initial developer will establish:
-
-- AstraEngine integration.
-- Unity project structure.
-- Basic world navigation.
-- Initial game runtime.
-- Core gameplay interfaces.
-- Example mission workflow.
-
-After the initial foundation is established, team members should be able to contribute independently.
+4. **Spatial Registration**
+
+   Associate observations with their geographic coordinates and spatial footprints.
+
+5. **Temporal Organization**
+
+   Organize observations according to their acquisition timestamps to create a chronological representation of the study area.
+
+6. **Scientific Analysis**
+
+   Apply appropriate SAR processing and comparison techniques to identify changes between observations.
+
+7. **Visualization**
+
+   Display the observations, derived analytical layers, and temporal changes on an interactive Earth interface.
+
+8. **Interpretation**
+
+   Communicate the observed changes and possible physical drivers through contextual information and visual storytelling.
+
+---
+
+## 4. Earth Twin Engine (ETE)
+
+Earth Twin Engine is the underlying application and visualization architecture intended to support multiple Earth-observation domains.
+
+The engine separates reusable geospatial and temporal infrastructure from domain-specific scientific processing.
+
+This distinction is important because different Earth-observation systems may use entirely different scientific datasets while sharing common spatial, temporal, and visualization requirements.
 
 For example:
 
-| Team Area | Contribution |
-|---|---|
-| Narrative | Story, universe background and mission briefings |
-| Gameplay | Mission objectives and gameplay mechanics |
-| Assets | Spacecraft, planets, environments and visual resources |
-| UI/UX | Mission control, spacecraft designer and dashboards |
-| Technical | Astra integration, simulation and bug fixes |
-| Testing | Gameplay testing, validation and feedback |
+- Avani uses atmospheric observations and weather-related variables.
+- Dancing with SAR uses radar observations and surface-related measurements.
 
-The project should be shared with clear documentation, dependencies and instructions for opening and running the Unity project.
+Both applications require geographic positioning, temporal organization, spatial data layers, and interactive visualization.
 
-# 12. Long-Term Possibilities
+Instead of building separate infrastructure for every scientific domain, ETE provides a shared foundation.
 
-The hybrid architecture is not limited to a single game concept.
+### 4.1 Shared Engine Capabilities
 
-If the initial project succeeds, the architecture could evolve into a reusable simulation platform.
+**Spatial System**
 
-Possible future directions include:
+- Geographic coordinate handling.
+- Latitude-longitude positioning.
+- Spatial region selection.
+- Geospatial layer management.
+- Support for gridded and raster-based observations.
 
-- Larger interstellar exploration environments.
-- Advanced spatial streaming and LOD.
-- More detailed spacecraft simulation.
-- Additional scientific mission types.
-- Persistent multiplayer exploration.
-- Integration with Unreal Engine.
-- Standalone AstraEngine applications.
+**Temporal System**
 
-The long-term goal is to preserve AstraEngine as a reusable backend rather than making it permanently dependent on one game or frontend.
+- Acquisition timestamp management.
+- Generalized timeline.
+- Temporal indexing.
+- Observation sequencing.
+- Before-and-after comparisons.
+- Time-dependent visualization.
 
-# 13. Final Proposal
+**Data System**
 
-The proposed development direction is:
+- Domain-specific data ingestion.
+- Data normalization.
+- Metadata management.
+- Spatial and temporal association.
+- Scientific data adapters.
 
-**Unity + AstraEngine: A Hybrid Space Exploration and Simulation Architecture.**
+**Visualization System**
 
-AstraEngine provides the underlying spatial and simulation foundation.
+- Interactive Earth visualization.
+- Spatial overlays.
+- Temporal playback.
+- Layer visibility controls.
+- Comparative visualization.
+- Scientific visualization components.
 
-Unity provides the game runtime, visual environment and gameplay experience.
+### 4.2 Domain-Specific Processing
 
-The development team provides the stories, missions, scientific content and assets.
+ETE does not assume that every Earth-observation dataset has the same structure or scientific meaning.
 
-The immediate objective is to build a functional prototype demonstrating a complete scientific expedition, using an astronomical catalogue as the foundation for exploration.
+Instead, individual scientific subsystems provide their own data interpretation and processing capabilities.
 
-The architecture should remain modular, reusable and independent of the selected frontend wherever practical.
+| Subsystem | Data Domain | Scientific Purpose |
+|---|---|---|
+| Avani | Atmospheric observations | Extreme-weather anomaly tracking |
+| TerraTrace | SAR and surface observations | Earth surface change monitoring |
 
-**This proposal is subject to team discussion. The final game concept, feature scope and technology decisions will be confirmed collectively before full development begins.**
+This separation allows the shared engine to evolve without coupling it to one scientific domain.
 
 ---
 
-*End of Proposal*
+## 5. TerraTrace — SAR Observation and Change Analysis
+
+TerraTrace is the scientific subsystem responsible for interpreting radar observations and representing changes occurring across Earth's surface.
+
+It provides the domain-specific capabilities required by Dancing with SAR.
+
+### 5.1 SAR Observation Management
+
+TerraTrace organizes radar observations into structured spatial and temporal records.
+
+An observation may contain:
+
+- Acquisition date and time.
+- Geographic footprint.
+- Radar frequency and polarization metadata.
+- Backscatter measurements.
+- Product identifiers.
+- Spatial resolution and coordinate reference information.
+- Relevant processing metadata.
+
+The exact fields depend on the NISAR product selected.
+
+### 5.2 Backscatter Visualization
+
+SAR backscatter represents the radar energy reflected toward the instrument.
+
+It provides information influenced by surface roughness, geometry, moisture, vegetation structure, and other properties.
+
+TerraTrace aims to visualize backscatter measurements through interpretable raster layers.
+
+Users should be able to:
+
+- Explore radar intensity.
+- Compare observations acquired on different dates.
+- Inspect different available polarization channels.
+- Identify areas showing substantial changes in radar response.
+
+Backscatter changes must not automatically be interpreted as a particular physical event. They require contextual interpretation and, where appropriate, additional datasets.
+
+### 5.3 Temporal Change Detection
+
+One of the primary capabilities of TerraTrace is identifying differences between radar observations acquired at different times.
+
+For a selected region, the system can compare observations from two or more acquisition dates.
+
+A simplified comparison can be represented as:
+
+\[
+\Delta B(x,y,t)=B(x,y,t_2)-B(x,y,t_1)
+\]
+
+Where:
+
+- \(B\) represents a suitable backscatter measurement.
+- \(x,y\) represent spatial coordinates.
+- \(t_1,t_2\) represent acquisition times.
+
+The resulting difference layer can highlight locations where radar responses have changed.
+
+This is an analytical starting point rather than a universal change-detection method. Appropriate calibration, radiometric normalization, spatial alignment, and product-specific processing are necessary before interpreting differences scientifically.
+
+### 5.4 Surface Change Interpretation
+
+TerraTrace will initially focus on one selected phenomenon and provide the processing and visualization needed to communicate it.
+
+Potential applications include:
+
+- Flood inundation monitoring.
+- Wetland expansion and contraction.
+- Forest disturbance.
+- Agricultural surface changes.
+- Soil-moisture-related changes.
+- Surface deformation, where suitable interferometric products are available.
+
+The system should distinguish between directly measured radar changes and inferred environmental interpretations.
+
+---
+
+## 6. The Generalized Timeline
+
+The temporal visualization system is one of the central components of Dancing with SAR.
+
+Instead of presenting satellite observations independently, the timeline organizes them into a sequence of observations of the same geographical region.
+
+### Capabilities
+
+- Display available acquisition dates.
+- Navigate between observations.
+- Play observations chronologically.
+- Pause and inspect individual dates.
+- Compare two selected acquisition dates.
+- Synchronize timeline selection with the Earth visualization.
+- Update spatial layers according to the selected observation.
+
+### Example
+
+Consider a flood-monitoring study area.
+
+| Observation | Timeline Event |
+|---|---|
+| \(T_1\) | Before flooding |
+| \(T_2\) | Early flood development |
+| \(T_3\) | Maximum observed inundation |
+| \(T_4\) | Receding water |
+| \(T_5\) | Post-event observation |
+
+As the timeline progresses, the corresponding radar layer changes.
+
+The user can visually follow the evolution of the region rather than interpreting five unrelated satellite images.
+
+The generalized timeline should remain independent of the underlying scientific domain so it can also support Avani's atmospheric observations.
+
+---
+
+## 7. Interactive Earth Visualization
+
+Dancing with SAR uses an interactive Earth interface as the primary medium for exploring spatial observations.
+
+The globe provides a common geographical reference for radar measurements and derived analytical layers.
+
+### Primary Visualization Features
+
+- Interactive 3D Earth.
+- Geographic region selection.
+- Spatial observation overlays.
+- SAR raster visualization.
+- Temporal layer switching.
+- Before-and-after comparison.
+- Change-detection visualization.
+- Observation metadata inspection.
+
+### Spatial Representation
+
+SAR observations are not necessarily point-based measurements.
+
+Many products represent spatially continuous raster data or georeferenced image footprints.
+
+Consequently, TerraTrace must preserve the spatial geometry and coordinate reference of the selected product rather than treating every radar measurement as an independent latitude-longitude point.
+
+Where appropriate, observations can be mapped onto the Earth visualization using georeferenced raster textures or tiled spatial layers.
+
+The existing globe infrastructure from Avani can serve as the visualization foundation, provided its rendering pipeline supports the spatial data representation required by the selected SAR products.
+
+---
+
+## 8. System Architecture
+
+The proposed architecture separates the shared application infrastructure from the scientific processing pipeline.
+
+```text
+                   DANCING WITH SAR
+                          |
+                 Earth Twin Engine
+                          |
+       +------------------+------------------+
+       |                  |                  |
+  Spatial System    Temporal System    Visualization
+       |                  |                  |
+       +------------------+------------------+
+                          |
+                   TerraTrace
+                          |
+                 SAR Data Adapter
+                          |
+                  Data Preparation
+                          |
+              Spatial Registration
+                          |
+              Observation Management
+                          |
+                 SAR Processing
+                          |
+               Change Detection
+                          |
+               Analytical Layers
+                          |
+               Earth Visualization
+                          |
+                 Timeline Playback
+```
+
+### 8.1 Presentation Layer
+
+Responsible for user interaction and visualization.
+
+Components:
+
+- Interactive Earth.
+- Timeline controls.
+- Study area selection.
+- Layer management.
+- Observation comparison.
+- Metadata panels.
+
+### 8.2 Application Runtime
+
+Coordinates application workflows and communication between subsystems.
+
+Responsibilities:
+
+- Managing observation requests.
+- Coordinating data ingestion.
+- Managing spatial and temporal state.
+- Updating visualization layers.
+- Handling user interactions.
+
+### 8.3 Scientific Processing Layer
+
+Contains SAR-specific processing and analytical operations.
+
+Responsibilities:
+
+- Product interpretation.
+- Backscatter preparation.
+- Spatial alignment.
+- Temporal comparison.
+- Change detection.
+- Analytical layer generation.
+
+### 8.4 Data Layer
+
+Responsible for retrieving and preparing external observations.
+
+Potential data sources:
+
+- NASA-ISRO NISAR data products.
+- NASA Earthdata services.
+- Alaska Satellite Facility DAAC resources, where applicable.
+- Supplemental geographic and environmental datasets.
+
+Data adapters should isolate external product formats from the shared application interfaces.
+
+---
+
+## 9. Data Pipeline
+
+The SAR data pipeline transforms externally supplied radar observations into visualization-ready spatial layers.
+
+```text
+        NISAR DATA PRODUCTS
+                 |
+                 v
+          Data Acquisition
+                 |
+                 v
+          Product Inspection
+                 |
+                 v
+          Data Preparation
+                 |
+                 v
+       Spatial Reference Handling
+                 |
+                 v
+         Temporal Organization
+                 |
+                 v
+          SAR Measurements
+                 |
+                 v
+        Scientific Processing
+                 |
+                 v
+        Change Detection
+                 |
+                 v
+        Visualization Layers
+                 |
+                 v
+          Interactive Earth
+```
+
+### Data Preparation Considerations
+
+The exact processing requirements depend on the selected NISAR product.
+
+Potential requirements include:
+
+- Product metadata inspection.
+- Coordinate reference interpretation.
+- Georeferencing.
+- Radiometric calibration.
+- Noise handling.
+- Terrain correction.
+- Spatial alignment.
+- Raster preparation.
+- Measurement normalization.
+
+Not every operation is required for every product. Existing calibrated and geocoded products should be preferred where they satisfy the intended analysis.
+
+### Data Formats
+
+The application should select its supported formats based on the actual NISAR products supplied by the challenge.
+
+Potential formats and representations include:
+
+- HDF5-based scientific products.
+- GeoTIFF and other geospatial raster representations.
+- NetCDF where provided.
+- Geospatial metadata and auxiliary files.
+
+The prototype should support the specific product used in its demonstration rather than attempting to implement every possible NISAR product format.
+
+---
+
+## 10. Scientific Applications
+
+The architecture is intended to support several types of Earth surface monitoring.
+
+### Flood Monitoring
+
+SAR can help identify inundated regions because open water often produces a distinct radar response.
+
+Potential visualizations:
+
+- Flood extent.
+- Before-and-after comparisons.
+- Inundation evolution.
+- Receding water patterns.
+
+### Wetland Monitoring
+
+Observe changes in wetland extent and seasonal surface conditions.
+
+### Forest Disturbance
+
+Investigate changes in radar backscatter associated with forest structure and disturbance.
+
+### Agricultural Monitoring
+
+Explore changes in agricultural landscapes and radar responses associated with surface and vegetation conditions.
+
+### Surface Deformation
+
+Where appropriate NISAR interferometric products and processing are available, explore ground deformation associated with geological processes.
+
+These applications represent future extensions. The initial implementation should prioritize one study area and one scientific phenomenon.
+
+---
+
+## 11. Relationship with Avani
+
+Dancing with SAR is designed as an extension of the geospatial and spatiotemporal architecture explored in Avani.
+
+Avani originally addressed the visualization and analysis of atmospheric observations for extreme-weather anomaly tracking.
+
+Its architecture already explores several capabilities relevant to Dancing with SAR:
+
+- Geographic positioning.
+- Spatial data organization.
+- Time-dependent observations.
+- Interactive Earth visualization.
+- Temporal navigation.
+- Spatial visualization layers.
+
+These capabilities provide a starting point for the new project.
+
+### Reusable Components
+
+| Existing Avani Capability | Dancing with SAR Application |
+|---|---|
+| Earth visualization | SAR observation visualization |
+| Geographic positioning | Radar spatial registration |
+| Timeline | SAR acquisition timeline |
+| Spatial layer management | Radar and change-detection layers |
+| Temporal data organization | Chronological SAR observations |
+| Visualization controls | Polarization and observation controls |
+
+### Components Requiring Extension
+
+| Component | Required Development |
+|---|---|
+| Data ingestion | NISAR-specific adapter |
+| Data normalization | SAR product interpretation |
+| Scientific processing | Backscatter and other product-specific processing |
+| Change analysis | Temporal SAR comparison |
+| Layer rendering | Georeferenced SAR raster support |
+| Metadata management | Radar acquisition metadata |
+
+The intention is to reuse the underlying engineering work without making the new application dependent on Avani's weather-specific scientific logic.
+
+---
+
+## 12. Technology and Implementation Strategy
+
+The implementation should prioritize technologies already used in the existing Avani codebase.
+
+The initial strategy is to preserve its established frontend, backend, and globe visualization rather than introducing a completely new technology stack during the hackathon.
+
+### Existing Infrastructure
+
+Reuse where verified:
+
+- Existing frontend application.
+- Existing backend runtime.
+- Earth visualization and rendering.
+- Geographic coordinate handling.
+- Generalized timeline.
+- Spatial layer infrastructure.
+
+### New Scientific Components
+
+Implement:
+
+- NISAR data adapter.
+- SAR observation model.
+- Product metadata interpretation.
+- Raster preparation.
+- Temporal comparison.
+- Change-detection workflow.
+- SAR-specific visualization layers.
+
+### Architectural Principle
+
+**Reuse the engine. Replace the scientific domain logic. Extend the visualization.**
+
+---
+
+## 13. Two-Day Hackathon Implementation Plan
+
+The primary objective is to produce a functional, demonstrable prototype within the available event period.
+
+The project should not attempt to implement every capability described in the long-term architecture.
+
+### Phase 1 — Foundation and Data Acquisition
+
+- Inspect Avani's existing architecture.
+- Identify reusable globe, timeline, and spatial-layer components.
+- Review the NISAR resources supplied by the challenge.
+- Select one study area.
+- Select one suitable SAR product.
+- Obtain and inspect the actual dataset.
+
+**Deliverable:** A verified SAR dataset and a working integration plan.
+
+### Phase 2 — SAR Data Integration
+
+- Implement the minimum required NISAR data adapter.
+- Extract relevant measurements and metadata.
+- Preserve geospatial information.
+- Organize observations by acquisition date.
+- Prepare visualization-ready raster layers.
+
+**Deliverable:** SAR observations available inside the application.
+
+### Phase 3 — Temporal Visualization
+
+- Connect SAR observations to the generalized timeline.
+- Display observations on the Earth.
+- Implement date selection.
+- Add chronological playback.
+- Implement before-and-after comparison.
+
+**Deliverable:** A functioning spatiotemporal SAR visualization.
+
+### Phase 4 — Change Detection
+
+- Implement a suitable comparison method for the chosen product.
+- Generate a change-detection layer.
+- Visualize the observed differences.
+- Add basic contextual interpretation.
+
+**Deliverable:** An interpretable surface-change visualization.
+
+### Phase 5 — Demonstration and Documentation
+
+- Prepare a focused study-area demonstration.
+- Explain the data source and methodology.
+- Demonstrate the timeline.
+- Show the observed changes.
+- Document limitations and future extensions.
+
+**Deliverable:** A complete hackathon prototype and presentation.
+
+---
+
+## 14. Minimum Viable Product (MVP)
+
+The MVP should demonstrate one complete scientific workflow.
+
+### Required Features
+
+- [ ] Interactive Earth visualization.
+- [ ] One selected study area.
+- [ ] At least two suitable SAR observations from different acquisition dates.
+- [ ] NISAR data ingestion.
+- [ ] Geospatially correct SAR visualization.
+- [ ] Acquisition-date timeline.
+- [ ] Before-and-after comparison.
+- [ ] One scientifically appropriate change-detection visualization.
+- [ ] Basic explanation of the observed changes.
+- [ ] Source and processing information.
+
+### Stretch Goals
+
+- [ ] Multiple polarization channels.
+- [ ] Additional study areas.
+- [ ] Temporal animation.
+- [ ] Multiple analytical layers.
+- [ ] Supplemental optical imagery.
+- [ ] Wetland and forest monitoring.
+- [ ] Advanced interferometric deformation analysis.
+- [ ] Additional Earth-observation data sources.
+
+The MVP takes priority over the stretch goals.
+
+---
+
+## 15. Scientific Integrity and Limitations
+
+Radar measurements are not direct labels of environmental phenomena.
+
+A change in backscatter does not automatically mean flooding, deforestation, or soil-moisture change.
+
+Interpretation must account for:
+
+- Radar polarization.
+- Acquisition geometry.
+- Surface roughness.
+- Dielectric properties.
+- Vegetation structure.
+- Temporal and seasonal variation.
+- Spatial resolution.
+- Calibration and processing conditions.
+
+For example, a flood-monitoring workflow must distinguish potential inundation signatures from other changes that could affect radar backscatter.
+
+Similarly, ground deformation analysis requires suitable interferometric observations and appropriate processing. A simple difference between two backscatter images is not an InSAR deformation measurement.
+
+The application should communicate the distinction between measured observations, analytical results, and scientific hypotheses.
+
+---
+
+## 16. Expected Impact
+
+Dancing with SAR aims to make radar-based Earth observation more accessible and understandable.
+
+Potential beneficiaries include:
+
+- Earth scientists and remote-sensing researchers.
+- Disaster-management authorities.
+- Environmental monitoring organizations.
+- Agricultural researchers.
+- Resource managers.
+- Educators and students.
+- Communities affected by environmental change.
+
+By combining spatial visualization with temporal analysis, the platform can help users understand not only where environmental changes occur, but also how they evolve.
+
+---
+
+## 17. Future Direction
+
+Dancing with SAR is the first planned scientific application built upon the Earth Twin Engine's reusable geospatial and temporal foundation.
+
+Future development could extend the engine toward a broader Earth observation environment integrating multiple complementary data sources.
+
+Potential extensions include:
+
+- Optical satellite imagery.
+- Atmospheric observations.
+- Land-surface measurements.
+- Vegetation indices.
+- Hydrological observations.
+- Additional radar missions.
+- Multi-sensor data fusion.
+- Long-term environmental trend analysis.
+
+The longer-term goal is to provide a common environment in which different observations of Earth can be spatially and temporally connected.
+
+---
+
+## 18. Project Vision
+
+Earth is continuously changing.
+
+Some changes unfold over hours, others over seasons, decades, or geological timescales. Many remain difficult to observe directly, especially across large geographical regions.
+
+Radar remote sensing provides a powerful way to observe these transformations.
+
+Dancing with SAR seeks to turn those observations into a visual and interactive experience, connecting geographical space with time and scientific interpretation.
+
+Through the Earth Twin Engine and its TerraTrace subsystem, the project aims to make Earth's changing surface easier to explore, understand, and communicate.
+
+**Because Earth's surface is never still. It is always dancing.**
+
+---
+
+## 19. Acknowledgements and Data Sources
+
+- NASA-ISRO Synthetic Aperture Radar (NISAR) Mission.
+- NASA Earth Science.
+- NASA Earthdata.
+- Alaska Satellite Facility Distributed Active Archive Center (ASF DAAC), where applicable.
+- NASA Space Apps Challenge.
+
+All datasets and third-party resources will be used according to their respective access conditions, attribution requirements, and data-use policies.
+
+---
+
+**Project:** Dancing with SAR  
+**Engine:** Earth Twin Engine (ETE)  
+**Subsystem:** TerraTrace  
+**Challenge:** NASA Space Apps Challenge — Dancing with SAR  
+**Status:** Hackathon Prototype — In Development
