@@ -1,40 +1,19 @@
-<<<<<<< HEAD
 # Dancing with SAR
 ### Understanding Earth's Changing Surface Through Radar Observations
-=======
-﻿# AetherEngine
-# Unity + TerraEngine
-## Hybrid Game Development Architecture
->>>>>>> 1ab7be931b9fd7830c944804633e95eb18a32a7b
 
 **Powered by Earth Twin Engine (ETE) · TerraTrace**
 
-<<<<<<< HEAD
 > Earth's surface is never static. It expands, contracts, floods, deforms, grows, and transforms. Dancing with SAR makes these changes visible through time using Synthetic Aperture Radar observations from the NASA-ISRO NISAR mission.
-=======
-**Status:** Proposed — Pending Team Discussion  
-**Development Target:** 7-Day Prototype  
-**Proposed Technology:** Unity + TerraEngine (C++ Backend)  
-**Game Direction:** EVE-inspired Space Exploration and Scientific Expeditions
->>>>>>> 1ab7be931b9fd7830c944804633e95eb18a32a7b
 
 ---
 
 ## 1. Project Overview
 
-<<<<<<< HEAD
 **Dancing with SAR** is an interactive geospatial and spatiotemporal visualization platform designed to track, analyze, and communicate changes occurring across Earth's surface using Synthetic Aperture Radar (SAR) observations.
 
 Developed around the NASA-ISRO Synthetic Aperture Radar (NISAR) mission, the platform aims to transform complex radar measurements into accessible visual representations of environmental and geographical change.
 
 The application enables users to explore selected geographic regions, examine radar observations acquired at different points in time, compare surface conditions, and visualize changes through an interactive Earth interface and generalized temporal timeline.
-=======
-This proposal introduces a hybrid game development architecture that combines **Unity as the game development and presentation environment** with **TerraEngine as an independent spatial and simulation backend**.
-
-Instead of developing an entire game engine from scratch, the approach is to reuse TerraEngine's existing architectural foundations while relying on Unity for the systems that make game development faster and more practical.
-
-TerraEngine will provide the underlying spatial intelligence, world representation, physics and selected simulation capabilities.
->>>>>>> 1ab7be931b9fd7830c944804633e95eb18a32a7b
 
 Rather than treating satellite observations as isolated images, Dancing with SAR organizes them into a continuous spatiotemporal representation of Earth's changing surface.
 
@@ -78,29 +57,17 @@ Unlike optical satellite instruments, SAR actively emits microwave signals and m
 
 However, SAR observations are fundamentally different from conventional optical imagery. Their interpretation requires an understanding of radar backscatter, polarization, surface roughness, dielectric properties, and, for interferometric applications, phase information.
 
-<<<<<<< HEAD
 **The challenge is therefore not simply displaying radar imagery. It is translating radar observations into meaningful representations of geographical change.**
 
 ---
 
 ## 3. Our Approach
-=======
-Rather than making TerraEngine responsible for every aspect of the game, each system will have a clearly defined owner.
-
-## 3.1 TerraEngine — Spatial and Simulation Backend
-
-TerraEngine will provide the underlying world and simulation capabilities.
->>>>>>> 1ab7be931b9fd7830c944804633e95eb18a32a7b
 
 Dancing with SAR approaches this challenge through a combination of geospatial data management, temporal analysis, radar-specific processing, and interactive visualization.
 
 The central idea is to represent Earth's surface as a collection of geographically located observations evolving through time.
 
-<<<<<<< HEAD
 Every observation is associated with:
-=======
-TerraEngine should remain independent of Unity-specific and Unreal-specific classes.
->>>>>>> 1ab7be931b9fd7830c944804633e95eb18a32a7b
 
 - Geographic location or spatial footprint.
 - Acquisition timestamp.
@@ -117,11 +84,7 @@ Users can then explore how a selected region changes across successive observati
 
 1. **Study Area Selection**
 
-<<<<<<< HEAD
    Select a geographic region of interest, such as a flood-prone region, wetland, agricultural landscape, forest, or earthquake-affected area.
-=======
-Unity will receive the required spatial and simulation information from TerraEngine and use it to update the game world.
->>>>>>> 1ab7be931b9fd7830c944804633e95eb18a32a7b
 
 2. **SAR Data Acquisition**
 
@@ -129,204 +92,11 @@ Unity will receive the required spatial and simulation information from TerraEng
 
 3. **Data Preparation**
 
-<<<<<<< HEAD
    Decode the selected product, inspect its metadata, prepare its spatial reference, and extract the measurements needed for visualization.
-=======
-The objective is to make the project modular enough that team members can work on different areas without needing to modify TerraEngine's internal implementation.
->>>>>>> 1ab7be931b9fd7830c944804633e95eb18a32a7b
 
 4. **Spatial Registration**
 
-<<<<<<< HEAD
    Associate observations with their geographic coordinates and spatial footprints.
-=======
-```text
-                  SPACE EXPLORATION GAME
-                           |
-                           |
-                  UNITY GAME RUNTIME
-                           |
-        +------------------+------------------+
-        |                  |                  |
-     Rendering          Gameplay            UI/UX
-        |                  |                  |
-     Assets             Missions           Graphs
-     Materials          Story              Dashboards
-     Animation          Input              Reports
-     Audio              Scenes             Controls
-        |                  |                  |
-        +------------------+------------------+
-                           |
-                   ASTRA INTEGRATION
-                           |
-                 Native C++ Library / DLL
-                           |
-                    ASTRA ENGINE
-                           |
-        +------------------+------------------+
-        |                  |                  |
-       HSC               Physics           Collision
-        |                  |                  |
-    Spatial World      Simulation       Detection
-        |
-    Coordinates
-        |
-    World Queries
-        |
-    Astronomical Data
-```
-
-The integration layer will act as the communication boundary between Unity and TerraEngine.
-
-Unity should not need to understand the internal implementation of HSC, physics or collision.
-
-It should interact with a defined public interface.
-
-# 5. TerraEngine Integration Strategy
-
-The proposed initial integration method is a native C++ shared library.
-
-TerraEngine will be compiled into a Windows DLL, which can be loaded by Unity.
-
-Unity's C# environment can communicate with the DLL through P/Invoke.
-
-A small public API will expose the required backend functionality.
-
-Illustrative API:
-
-```cpp
-Astra_Initialize();
-Astra_LoadWorld();
-Astra_Update(deltaTime);
-
-Astra_QuerySpatialRegion(...);
-Astra_GetEntityState(...);
-
-Astra_Shutdown();
-```
-
-These are illustrative interface names. The actual API will be designed around TerraEngine's existing modules and ownership rules.
-
-## 5.1 Proposed Integration Components
-
-```text
-TerraEngine/
-|
-+-- Core/
-+-- Spatial/
-|   +-- HSC/
-|   +-- Coordinates/
-|   +-- World/
-|
-+-- Physics/
-+-- Collision/
-+-- Simulation/
-+-- Data/
-|
-+-- Integration/
-    +-- PublicAPI/
-    +-- APIImplementation/
-    +-- AstraSDK/
-```
-
-Unity-side integration:
-
-```text
-UnityProject/
-|
-+-- Assets/
-|
-+-- Plugins/
-|   +-- TerraEngine.dll
-|
-+-- Scripts/
-|   +-- AstraBridge/
-|   +-- World/
-|   +-- Spatial/
-|   +-- Gameplay/
-|
-+-- Scenes/
-+-- UI/
-+-- Missions/
-+-- Spacecraft/
-+-- Environments/
-```
-
-## 5.2 Future Engine Compatibility
-
-The integration should be designed so that the same TerraEngine backend can eventually support other frontend applications.
-
-Potential future integrations:
-
-- Unity.
-- Unreal Engine.
-- Standalone Vulkan applications.
-- Other native C++ applications.
-
-Each frontend would require its own adapter or plugin.
-
-The underlying spatial and simulation systems would remain independent.
-
-This is a long-term architectural objective, not a requirement for the initial prototype.
-
-# 6. Simulation and Game Loop
-
-Unity will control the main game runtime and determine when TerraEngine receives updates.
-
-TerraEngine will maintain its own internal simulation state and timestep.
-
-Proposed execution flow:
-
-```text
-Unity Game Loop
-      |
-      v
-Player Input
-      |
-      v
-Astra Commands
-      |
-      v
-Astra Simulation Update
-      |
-      +---- HSC
-      |
-      +---- Physics
-      |
-      +---- Collision
-      |
-      v
-Simulation State Extraction
-      |
-      v
-Unity World Synchronization
-      |
-      v
-Rendering and UI Updates
-```
-
-A fixed simulation timestep should be used for physics where appropriate, with rendering allowed to run independently.
-
-The architecture must define authoritative ownership of simulation state to prevent Unity and TerraEngine from independently controlling the same physical properties.
-
-# 7. Initial Gameplay Workflow
-
-The first playable experience should demonstrate one complete scientific expedition.
-
-Proposed mission workflow:
-
-1. **Universe Navigation** — Explore the astronomical catalogue.
-2. **Target Selection** — Select a discovered planetary system.
-3. **Scientific Briefing** — Review the target's known properties and mission objectives.
-4. **Spacecraft Design** — Configure the spacecraft and its subsystems.
-5. **Payload Configuration** — Select scientific instruments.
-6. **Engineering Validation** — Check mass, power, propulsion and communication constraints.
-7. **Mission Launch** — Begin the mission.
-8. **Space Navigation** — Travel towards the selected target.
-9. **Scientific Observation** — Collect simulated scientific measurements.
-10. **Mission Evaluation** — Evaluate objectives and engineering performance.
-11. **Mission Report** — Present collected data and mission results.
->>>>>>> 1ab7be931b9fd7830c944804633e95eb18a32a7b
 
 5. **Temporal Organization**
 
@@ -338,31 +108,13 @@ Proposed mission workflow:
 
 7. **Visualization**
 
-<<<<<<< HEAD
    Display the observations, derived analytical layers, and temporal changes on an interactive Earth interface.
-=======
-This schedule assumes that TerraEngine's existing systems are usable, the HSC is sufficiently stable for integration, and most visual assets are sourced or adapted rather than modelled from scratch.
->>>>>>> 1ab7be931b9fd7830c944804633e95eb18a32a7b
 
 8. **Interpretation**
 
    Communicate the observed changes and possible physical drivers through contextual information and visual storytelling.
 
-<<<<<<< HEAD
 ---
-=======
-- TerraEngine native integration.
-- HSC-backed spatial queries.
-- Astronomical catalogue integration.
-- Basic universe navigation.
-- Planetary system selection.
-- Spacecraft configuration.
-- Mission interface.
-- Resource management.
-- Simplified mission simulation.
-- Scientific observation.
-- Mission evaluation and reporting.
->>>>>>> 1ab7be931b9fd7830c944804633e95eb18a32a7b
 
 ## 4. Earth Twin Engine (ETE)
 
@@ -370,65 +122,7 @@ Earth Twin Engine is the underlying application and visualization architecture i
 
 The engine separates reusable geospatial and temporal infrastructure from domain-specific scientific processing.
 
-<<<<<<< HEAD
 This distinction is important because different Earth-observation systems may use entirely different scientific datasets while sharing common spatial, temporal, and visualization requirements.
-=======
-These can be considered in future development if the project direction and available time justify them.
-
-# 10. Important Technical Considerations
-
-Several areas require careful implementation.
-
-### Coordinate Systems
-
-Astronomical coordinates and local rendering coordinates operate at very different scales.
-
-TerraEngine should handle authoritative spatial coordinates and reference frames. Unity should receive suitable local or camera-relative coordinates for rendering.
-
-### Physics Ownership
-
-TerraEngine and Unity must not independently simulate the same physical object.
-
-The team must establish whether Astra or Unity owns each object's authoritative physics state.
-
-### Memory and DLL Boundaries
-
-The public API should define:
-
-- Memory ownership.
-- Error handling.
-- Thread safety.
-- Data structure compatibility.
-- API versioning.
-- Initialization and shutdown behavior.
-
-### Performance
-
-High-frequency simulation data should use efficient native data exchange rather than repeatedly serializing large JSON structures.
-
-### Visual Assets
-
-Unity will own visual assets and their presentation. TerraEngine should not require Unity-specific asset types.
-
-### Scientific Accuracy
-
-Real astronomical catalogue values should be retained and labelled as observed data. Generated planetary surfaces, environments and other speculative properties must be identified as illustrative.
-
-# 11. Team Handoff and Development
-
-One of the main goals is to establish a reusable Unity project that can be shared with other team members.
-
-The initial developer will establish:
-
-- TerraEngine integration.
-- Unity project structure.
-- Basic world navigation.
-- Initial game runtime.
-- Core gameplay interfaces.
-- Example mission workflow.
-
-After the initial foundation is established, team members should be able to contribute independently.
->>>>>>> 1ab7be931b9fd7830c944804633e95eb18a32a7b
 
 For example:
 
@@ -449,7 +143,6 @@ Instead of building separate infrastructure for every scientific domain, ETE pro
 - Geospatial layer management.
 - Support for gridded and raster-based observations.
 
-<<<<<<< HEAD
 **Temporal System**
 
 - Acquisition timestamp management.
@@ -458,17 +151,6 @@ Instead of building separate infrastructure for every scientific domain, ETE pro
 - Observation sequencing.
 - Before-and-after comparisons.
 - Time-dependent visualization.
-=======
-- Larger interstellar exploration environments.
-- Advanced spatial streaming and LOD.
-- More detailed spacecraft simulation.
-- Additional scientific mission types.
-- Persistent multiplayer exploration.
-- Integration with Unreal Engine.
-- Standalone TerraEngine applications.
-
-The long-term goal is to preserve TerraEngine as a reusable backend rather than making it permanently dependent on one game or frontend.
->>>>>>> 1ab7be931b9fd7830c944804633e95eb18a32a7b
 
 **Data System**
 
@@ -478,7 +160,6 @@ The long-term goal is to preserve TerraEngine as a reusable backend rather than 
 - Spatial and temporal association.
 - Scientific data adapters.
 
-<<<<<<< HEAD
 **Visualization System**
 
 - Interactive Earth visualization.
@@ -487,11 +168,6 @@ The long-term goal is to preserve TerraEngine as a reusable backend rather than 
 - Layer visibility controls.
 - Comparative visualization.
 - Scientific visualization components.
-=======
-**Unity + TerraEngine: A Hybrid Space Exploration and Simulation Architecture.**
-
-TerraEngine provides the underlying spatial and simulation foundation.
->>>>>>> 1ab7be931b9fd7830c944804633e95eb18a32a7b
 
 ### 4.2 Domain-Specific Processing
 
